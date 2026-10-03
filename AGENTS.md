@@ -15,8 +15,7 @@ Edits through these links change the real directories outside this repo.
 A worktree of this wrapper still points to those same directories and does not isolate their contents.
 
 Before editing linked content, read the target's applicable `AGENTS.md` and check its Git status.
-Override the global worktree rule for routine changes here, including edits through the symlinks: work in the current checkout.
-Use worktrees only for major features, such as adding file syncing.
-When a major feature changes a linked repository, create the worktree in that repository.
+Work directly on `master` in this checkout, including edits through the symlinks. Create a worktree or branch only when the user asks for one.
+When the user asks for a worktree for a linked repository, create it in that repository.
 Commit linked content in its owning repository. This wrapper tracks the links, not their contents.
 Preserve the symlinks. Do not replace them with copied directories.
